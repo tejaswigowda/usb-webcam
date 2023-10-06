@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO, datefmt='%m/%d/%Y %I:%M:%S %p', format='
 width = 640             # Frame width
 height = 480            # Frame height
 fps = 30                # Camera FPS
-ip = "192.168.1.222"    # WebSocket (computer) server ip address
+ip = "192.168.0.174"    # WebSocket (computer) server ip address
 port = 2281             # WebSocket (computer) server port
 vflip = 1               # Flip frame vertically (0-False, 1-True)
 hflip = 0               # Flip frame horizontally (0-False, 1-True)
