@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>usb webcam viewer</title>
+        
+    </head>
+    <body style="height:100vh;margin:0;width:100vw;overflow:hidden;background:black;">
+        <video id="video" style="height:100vh;margin:0;width:100vw;" autoplay></video>
+
+    </body>
+    <script>
+        var video = document.getElementById('video');
+        
+        navigator.getMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+
+        window.navigator.getUserMedia({ video: true }, function(stream) {
+            video.srcObject = stream;
+            video.play();
+        }, function(error) {
+            console.log("Failed to get a stream due to", error);
+        });
+     
+    </script>
+</html>
